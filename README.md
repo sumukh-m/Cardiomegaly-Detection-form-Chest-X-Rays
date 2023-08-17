@@ -17,11 +17,15 @@ Unbalanced          82%          81%          83%           81%
 # Implementation
 The implementation of our Cardiomegaly Detection system was done using the Keras deep learning framework with a TensorFlow backend. We used Python as our programming language. We used the publicly available NIH (National Institute of Health) Chest X-ray dataset, which consists of 112,120 frontal-view chest X-ray images from 30,805 unique patients, labeled with 14 different thoracic diseases, including cardiomegaly. We preprocessed the images by resizing them to respective input image sizes of models and normalizing the pixel values to a range of [0,1]. We first organized the Chest X-ray dataset into two categories: one for cases with cardiomegaly and one for cases without cardiomegaly. We then performed exploratory data analysis techniques to examine the distributions and check the balance of the dataset.
 
+![image](https://github.com/sumukh-m/Cardiomegaly-Detection/blob/master/Screenshots/X-Ray.png)
+
 We split the dataset into training, validation, and test datasets with a ratio of 80:08:12. To balance the distribution in the dataset, we used oversampling to increase the number of cases with cardiomegaly by data augmentation. We used the ImageDataGenerator function in Keras to perform data augmentation on the training dataset, including horizontal and vertical flipping, random rotation, and zooming.
 
 The implementation of the dataset on the entire model without any pretrained weights, as well as on the model with an appended layer of fully connected layers, did not give satisfactory accuracy. This approach was tried initially to train the model from scratch without any prior knowledge or weights. However, due to the lack of training data and the complexity of the problem, the accuracy obtained was not up to the mark. Hence, the transfer learning approach was utilized, where a pre-trained model was used as a starting point for training the model on the given dataset. Although the accuracy improved significantly, the performance was still not optimal.
 
 Therefore, we added an attention model to the pre-trained models to improve their performance. We also applied global weighted average pooling to capture the most important features of the images and output them to a classification layer with dropout and two fully connected layers.
+
+![image](https://github.com/sumukh-m/Cardiomegaly-Detection/blob/master/Screenshots/global%20weighted%20average.PNG)
 
 We also applied these techniques on both unbalanced and balanced datasets. Using an unbalanced dataset can be problematic because it can lead to biased and inaccurate model performance. In an unbalanced dataset, the number of examples in each class is not evenly distributed. This means that the model is more likely to be trained on one class over another, which can result in a biased model that performs poorly on the underrepresented class. On the other hand, a balanced dataset ensures that the model is trained on an equal number of examples from each class, resulting in a more accurate and unbiased model. The model is forced to learn the features that are common to all classes rather than relying on the bias towards one class.
 
@@ -31,4 +35,7 @@ We trained the models using transfer learning, fine-tuning pre-trained models on
 
 # Results and Evaluation
 
-![image]()
+![image](https://github.com/sumukh-m/Cardiomegaly-Detection/blob/master/Screenshots/Table%201.PNG)
+
+![image](https://github.com/sumukh-m/Cardiomegaly-Detection/blob/master/Screenshots/Table%202.PNG)
+
