@@ -35,7 +35,9 @@ We trained the models using transfer learning, fine-tuning pre-trained models on
 
 # Results and Evaluation
 
+## Balanced Dataset
 ![image](https://github.com/sumukh-m/Cardiomegaly-Detection/blob/master/Screenshots/Table%201.PNG)
 
+## UnBalanced Dataset
 ![image](https://github.com/sumukh-m/Cardiomegaly-Detection/blob/master/Screenshots/Table%202.PNG)
 
