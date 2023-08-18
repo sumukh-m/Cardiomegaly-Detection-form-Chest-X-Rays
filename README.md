@@ -1,5 +1,5 @@
 
-# Cardiomegaly Detection using Chest X-Rays using CNN and Transfer Learning
+# Cardiomegaly Detection from Chest X-Rays using CNN and Transfer Learning
 
 The "Cardiomegaly Detection using Chest X-Rays using CNN and Transfer Learning" project aims to develop a robust and accurate automated system for detecting cardiomegaly, a condition characterized by an enlarged heart, by analyzing chest X-ray images. The project leverages Convolutional Neural Networks (CNNs) and employs transfer learning techniques using popular pre-trained models such as ResNet50, InceptionV3, DenseNet121, and EfficientNetB0.
 
